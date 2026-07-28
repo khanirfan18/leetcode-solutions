@@ -4,9 +4,7 @@ class Solution:
         for i in range(0, len(nums)):
             if nums[i] != val:
                 nums[point] = nums[i]
-                point+=1
-        
+                point+= 1
+            
         return point
                 
-
-                      
