@@ -9,7 +9,6 @@ class Solution:
                 nums[point] = nums[i]
                 point+=1
         for j in range(point,len(nums)):
-            nums[point] = 0
-            point+=1
+            nums[j] = 0
         return nums
         
