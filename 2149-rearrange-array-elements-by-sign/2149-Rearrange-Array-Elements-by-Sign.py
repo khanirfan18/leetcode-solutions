@@ -1,27 +1,15 @@
 class Solution:
     def rearrangeArray(self, nums: list[int]) -> list[int]:
-        positive_arr = []
-        negative_arr = []
-        result = []
+        result = [0] * len(nums)
+        pi = 0
+        ni = 1
+
         for num in nums:
-            if num >= 0:
-                positive_arr.append(num)
+            if num > 0:
+                result[pi] = num
+                pi+=2
             else:
-                negative_arr.append(num)
-
-        i = 0
-        while i < len(positive_arr) :
-            result.append(positive_arr[i])
-            result.append(negative_arr[i])
-            i+=1
-
+                result[ni] = num
+                ni+=2
+        
         return result
-
-
-                
-
-         
-
-
-
-
